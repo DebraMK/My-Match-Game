@@ -8,10 +8,25 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- <input type="file" id="image input" accept="image/png, image/jpg">
+    <div id="display image"></div> -->
     <h1>My Match Game</h1>
     <h2>developed by D. Koch</h2>
     <p>Flip over 2 cards at a time.  Try to match up all the cards as quickly as you can. Remember what you flipped over!</p>
-   
+    
+    <div class="card">
+        <div class="cardInner"
+        onclick="this.classList.toggle('flipped');">
+            <div class="cardFront">
+                <img src="./assets/abstract-1510190_1920.png" alt="geometric pattern" style="width: 100px; height: 140px;">
+    
+            </div>
+            <div class="cardBack">
+                <img src="./assets/geodesign.png" alt="geometric pattern" style="width: 100px; height: 140px;>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="a">1</div>
         <div class="b">2</div>
