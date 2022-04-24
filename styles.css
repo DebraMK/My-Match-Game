@@ -55,9 +55,8 @@ h2 {
     transition: transform .2s;
 }
 
-/* flip card on click */
-.container:hover .card{
-    transform: rotateY(180deg);
+.card.flip {
+    transform:rotateY(180deg)
 }
 
 .back, .front{

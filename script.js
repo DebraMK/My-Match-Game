@@ -5,13 +5,34 @@
 // timer start on 1st clip, stop when all cards matched
 // reset game or new game button
 
-
-const cardInner = document.getElementsByClassName("cardInner"); 
+const cards = document.querySelectorAll('.card');
+let flippedCard = false;
+let cardOne, cardTwo;
     // addEventListener = when player clicks on card, it flips and displays a symbol
 // cardInner.addEventListener("click", flipCard);  
 
-// var class1 = "null";
-// var class2 = "null";
+function flipCard() {
+    this.classList.toggle('flip');
+    if(!flippedCard){
+        flippedCard = true;
+        cardOne = this;
+    } 
+    else {
+        flippedCard = false;
+        cardTwo = this;
+    } 
+    if(cardOne.dataset.imagefront === cardTwo.dataset.imagefront){
+        cardOne.removeEventListener("click", flipCard);
+        cardTwo.removeEventListener("click", flipCard);
+    }
+    console.log(cardOne.dataset.imagefront);
+    console.log(cardTwo.dataset.imagefront);
+
+}
+
+cards.forEach(card => card.addEventListener("click", flipCard));
+
+    
 
 // function flipCard(id){
 //     (class1 = id) || (class2 = id) ? front:back
