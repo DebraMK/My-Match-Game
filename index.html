@@ -13,47 +13,109 @@
     <h1>My Match Game</h1>
     <h2>developed by D. Koch</h2>
     <p>Flip over 2 cards at a time.  Try to match up all the cards as quickly as you can. Remember what you flipped over!</p>
-    
-    <div class="card">
-        <div class="cardInner"
-        onclick="this.classList.toggle('flipped');">
-            <div class="cardFront">
-                <img src="./assets/abstract-1510190_1920.png" alt="geometric pattern" style="width: 100px; height: 140px;">
-    
-            </div>
-            <div class="cardBack">
-                <img src="./assets/geodesign.png" alt="geometric pattern" style="width: 100px; height: 140px;>
-            </div>
+    <section>
+        add timer and reset game button 
+    </section>
+<!-- Card images front and back -->
+    <main class="container">
+        <div class="card" data-imagefront="circle_blueglass">
+            <img class="front" src="./assets/circle_blueglass.jpg" alt="circle blueglass"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div>    
+        <div class="card" data-imagefront="circle_blueglass">
+            <img class="front" src="./assets/circle_blueglass.jpg" alt="circle blueglass"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div>    
+        <div class="card" data-imagefront="circle_greentube">
+            <img class="front" src="./assets/circle_greentube.jpg" alt="circle greentube"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
         </div>
-    </div>
+        <div class="card" data-imagefront="circle_greentube">
+            <img class="front" src="./assets/circle_greentube.jpg" alt="circle greentube"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div>    
+        <div class="card" data-imagefront="cross_hikemarker">
+            <img class="front" src="./assets/cross_hikemarker.jpg" alt="cross hike marker"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="cross_hikemarker">
+            <img class="front" src="./assets/cross_hikemarker.jpg" alt="cross hike marker"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="cross_simple">
+            <img class="front" src="./assets/cross_simple.jpg" alt="cross simple"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="cross_simple">
+            <img class="front" src="./assets/cross_simple.jpg" alt="cross hike simple"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="heart_flowers">
+            <img class="front" src="./assets/heart_flowers.jpg" alt="heart flowers"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="heart_flowers">
+            <img class="front" src="./assets/heart_flowers.jpg" alt="heart flowers"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="heart_pinkart">
+            <img class="front" src="./assets/heart_pinkart.jpg" alt="heart pink art"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="heart_pinkart">
+            <img class="front" src="./assets/heart_pinkart.jpg" alt="heart pink art"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="square_door">
+            <img class="front" src="./assets/square_door.jpg" alt="square door"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="square_door">
+            <img class="front" src="./assets/square_door.jpg" alt="square door"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="square_mailbox">
+            <img class="front" src="./assets/square_mailbox.jpg" alt="square mailbox"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="square_mailbox">
+            <img class="front" src="./assets/square_mailbox.jpg" alt="square mailbox"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="star_cookie">
+            <img class="front" src="./assets/star_cookie.jpg" alt="star cookie"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="star_cookie">
+            <img class="front" src="./assets/star_cookie.jpg" alt="star cookie"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="star_ornament">
+            <img class="front" src="./assets/star_ornament.jpg" alt="star ornament"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="star_ornament">
+            <img class="front" src="./assets/star_ornament.jpg" alt="star ornament"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="triangle_pizza">
+            <img class="front" src="./assets/triangle_pizza.jpg" alt="slice of pizza"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="triangle_pizza">
+            <img class="front" src="./assets/triangle_pizza.jpg" alt="slice of pizza"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="triangle_pizza">
+            <img class="front" src="./assets/triangle_stealth.jpg" alt="stealth fighterjet"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
+        <div class="card" data-imagefront="triangle_pizza">
+            <img class="front" src="./assets/triangle_stealth.jpg" alt="stealth fighterjet"/>
+            <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
+        </div> 
 
-    <div class="container">
-        <div class="a">1</div>
-        <div class="b">2</div>
-        <div class="c">3</div>
-        <div class="d">4</div>
-        <div class="e">5</div>
-        <div class="f">6</div>
-        <div class="g">7</div>
-        <div class="h">8</div>
-        <div class="i">9</div>
-        <div class="j">10</div>
-        <div class="k">11</div>
-        <div class="l">12</div>
-        <div class="m">13</div>
-        <div class="n">14</div>
-        <div class="o">15</div>
-        <div class="p">16</div>
-        <div class="q">17</div>
-        <div class="r">18</div>
-        <div class="s">19</div>
-        <div class="t">20</div>
-        <div class="u">21</div>
-        <div class="v">22</div>
-        <div class="w">23</div>
-        <div class="x">24</div>
-
-      </div>
+    </main>
    
     <script src="./script.js"></script> 
 </body>
