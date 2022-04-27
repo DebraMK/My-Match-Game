@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Match Game</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- <input type="file" id="image input" accept="image/png, image/jpg">
@@ -14,7 +17,12 @@
     <h2>developed by D. Koch</h2>
     <p>Flip over 2 cards at a time.  Try to match up all the cards as quickly as you can. Remember what you flipped over!</p>
     <section>
-        add timer and reset game button 
+        <div class="timer">
+            <div class="timeDisplay">
+                00 : 00 : 000
+            </div>
+        </div>
+        <!-- add timer and reset game button  -->
     </section>
 <!-- Card images front and back -->
     <main class="container">
@@ -106,11 +114,11 @@
             <img class="front" src="./assets/triangle_pizza.jpg" alt="slice of pizza"/>
             <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
         </div> 
-        <div class="card" data-imagefront="triangle_pizza">
+        <div class="card" data-imagefront="triangle_stealth">
             <img class="front" src="./assets/triangle_stealth.jpg" alt="stealth fighterjet"/>
             <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
         </div> 
-        <div class="card" data-imagefront="triangle_pizza">
+        <div class="card" data-imagefront="triangle_stealth">
             <img class="front" src="./assets/triangle_stealth.jpg" alt="stealth fighterjet"/>
             <img class="back" src="./assets/card_back.png" alt="geometric pattern"/>
         </div> 

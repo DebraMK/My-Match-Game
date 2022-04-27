@@ -1,17 +1,25 @@
-// shuffle board
 // flip 2 cards and check for match
 // if match, keep face up, else unflip
 // flip only 2 cards at a time  and no double clicks
-// timer start on 1st clip, stop when all cards matched
+// timer start on 1st click, stop when all cards matched
 // reset game or new game button
 
 const cards = document.querySelectorAll('.card');
+const container = document.getElementsByClassName('container');
 let flippedCard = false;
+let freezeState = false;
+var numberPairs = 12;
 let cardOne, cardTwo;
-    // addEventListener = when player clicks on card, it flips and displays a symbol
-// cardInner.addEventListener("click", flipCard);  
+let [milliseconds, seconds, minutes] = [0,0,0];
+let timer = document.querySelector('.timeDisplay');
+var stoptime = true;
+
+
+// addEventListener = when player clicks on card, it flips and displays a symbol
+
 
 function flipCard() {
+    if (freezeState) return;
     this.classList.toggle('flip');
     if(!flippedCard){
         flippedCard = true;
@@ -20,44 +28,56 @@ function flipCard() {
     else {
         flippedCard = false;
         cardTwo = this;
-    } 
+        checkMatch();
+    }
+   
+}
+    
+// check if cards match
+function checkMatch(){
+    
     if(cardOne.dataset.imagefront === cardTwo.dataset.imagefront){
         cardOne.removeEventListener("click", flipCard);
         cardTwo.removeEventListener("click", flipCard);
     }
-    console.log(cardOne.dataset.imagefront);
-    console.log(cardTwo.dataset.imagefront);
+    else {
+        freezeState = true;
+        setTimeout(() => {
+            cardOne.classList.remove ('flip');
+            cardTwo.classList.remove ('flip'); 
+            freezeState = false;
+        }, 1000);
+        
+    }
+}
 
+// shuffle cards
+function shuffle(){
+    cards.forEach(card => {
+        let randomPos = Math.floor(Math.random() * 23);
+        card.style.order=randomPos;
+    })
 }
 
 cards.forEach(card => card.addEventListener("click", flipCard));
 
-    
-
-// function flipCard(id){
-//     (class1 = id) || (class2 = id) ? front:back
-// }
-// // check if cards match
-// function checkMatch(){
-//     if(card1 == null){
-//         card1 = id
-//     }
-//     else if (card2 == null){
-//         card2 = id
-//     }
-//     checkMatch(card1, card2)
-// }
-
-// function activeCard(id, cardFace){
-//     if(card1 == id || card2 == id){
-//         $("#" + id).className = cardFace
-//     } else
-//         $("#" + id).className = cardBack
-// }
-
-
-function timer(){
-    // when 1st card flipped, start timer. 
-    // stop timer when all cards matched.
+// when 1st card flipped, start timer. 
+// stop timer when all cards matched.
+function startTimer(){
 
 }
+
+function stopTimer(){
+
+}
+
+// function timerReset(){
+//     timer.innerHTML = "00:00:000";
+//     stoptime = true;
+//     hr = 0;
+//     sec = 0;
+//     min = 0;
+// }
+
+
+shuffle()
