@@ -25,15 +25,24 @@ h1 {
 
 h2 {
     text-align: center;
+    font-size: 15px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.control {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
 .timer {
     background-color: yellowgreen;
+    position: relative;
+    left: 10px;
     width: 35%;
     height: 20%;
     margin: auto;
-    padding: 10px 0;
+    padding: 5px 0;
     border: 5px solid royalblue;
     border-radius: 10px;
     box-sizing: border-box;
@@ -41,7 +50,7 @@ h2 {
 
 .timeDisplay {
     position: relative;
-    width: 80%;
+    width: 70%;
     padding: 10px;
     margin: auto;
     background: whitesmoke;
@@ -49,6 +58,20 @@ h2 {
     font-size: 30px;
     border-radius: 5px;
 
+}
+
+.button {
+    position: relative;
+    width: 25%;
+    height: 10%;
+    padding: 10px;
+    margin: auto;
+    background: royalblue;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .container {
