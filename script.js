@@ -20,8 +20,9 @@ var activeGame = false;
 
 
 function flipCard() {
-    if  (!activeGame) {
-        activeGame == true
+    while (!activeGame) {
+        console.log ("hi");
+        activeGame == true;
     }
     if (freezeState) return;
     this.classList.toggle('flip');
@@ -78,9 +79,9 @@ function gameOver(){
 
 
 // ANOTHER TIMER TO TRY
-var timerVar = setInterval(countTimer, 1000);
+// var timerVar = setInterval(countTimer, 1000);
 var totalSeconds = 0;
-function countTimer() {
+async function countTimer() {
     if(activeGame == true) {
            ++totalSeconds;
            var hour = Math.floor(totalSeconds /3600);
@@ -93,6 +94,8 @@ function countTimer() {
            if(second < 10)
              second = "0"+second;
            document.getElementsByClassName("timeDisplay").innerHTML = hour + ":" + minute + ":" + second;
+            await sleep (1000);
+            console.log (totalSeconds);
         }
     }
 // reset game or new game button
