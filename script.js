@@ -10,15 +10,12 @@ let freezeState = false;
 var numberPairs = 12;
 let cardOne, cardTwo;
 var timer = { 
-    sec: 0,
-    min: 0,
-    hr: 0,
+    second: 0,
+    minute: 0,
+    hour: 0,
 }
-var stoptime = true;
-
+var stopTime = true;
 var startTime = false;
-
-
 
 // addEventListener = when player clicks on card, it flips and displays a symbol
 
@@ -44,7 +41,7 @@ function checkMatch(){
     if(cardOne.dataset.imagefront === cardTwo.dataset.imagefront){
         cardOne.removeEventListener("click", flipCard);
         cardTwo.removeEventListener("click", flipCard);
-        numberPairs--;
+        numberPairs --;
     }
     else {
         freezeState = true;
@@ -72,39 +69,33 @@ cards.forEach(card => card.addEventListener("click", flipCard));
 function startTimer(){
     if(!startTime){
         startTime = true;  
-        displayTime()  
+        countTimer();  
     }
 }
 
 function stopTimer(){
-    if(numberPairs === 0)
-    stoptime=true;
-    displayTime()
-}
-
-function displayTime(){
-
-    let timerElement = document.getElementsByClassName("timeDisplay");
-    sec+=1;
-    if(sec == 60){
-        sec = 0;
-        min++;
-        if(min == 60){
-            hr++;
-        }
+    if(numberPairs === 0){
+     clearInterval(timerVar)
     }
-    // if (sec <10){
-    //     second = "0"+ sec;
-    // }
-    // if (min <10){
-    //     minute = "0"+ min;
-    // }    
-    // if (hr <10){
-    //     hour = "0"+ hr;
-    // }
-    
-    timerElement.innerHTML = hr + ":" + min + ":" + sec;
 }
+
+
+// ANOTHER TIMER TO TRY
+var timerVar = setInterval(countTimer, 1000);
+var totalSeconds = 0;
+function countTimer() {
+           ++totalSeconds;
+           var hour = Math.floor(totalSeconds /3600);
+           var minute = Math.floor((totalSeconds - hour*3600)/60);
+           var second = totalSeconds - (hour*3600 + minute*60);
+           if(hour < 10)
+             hour = "0"+hour;
+           if(minute < 10)
+             minute = "0"+minute;
+           if(second < 10)
+             second = "0"+second;
+           document.getElementsByClassName("timeDisplay").innerHTML = hour + ":" + minute + ":" + second;
+        }
 
 // reset game or new game button
 function refreshPage(){
@@ -113,3 +104,5 @@ function refreshPage(){
 
 
 shuffle()
+
+
