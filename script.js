@@ -23,6 +23,7 @@ function flipCard() {
         countTimer();
     }
     if (freezeState) return;
+    if (this === cardOne) return;
 
     this.classList.toggle('flip');
 
