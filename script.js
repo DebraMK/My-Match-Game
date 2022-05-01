@@ -16,10 +16,8 @@ var timer = {
 }
 var activeGame = false;
 
-// addEventListener = when player clicks on card, it flips and displays a symbol
-
+// Flip card,
 function flipCard() {
-
     if (!activeGame) {
         activeGame = true;
         countTimer();
@@ -37,12 +35,10 @@ function flipCard() {
         cardTwo = this;
         checkMatch();
     }
-   
 }
     
 // check if cards match
 function checkMatch(){
-    
     if(cardOne.dataset.imagefront === cardTwo.dataset.imagefront){
         cardOne.removeEventListener("click", flipCard);
         cardTwo.removeEventListener("click", flipCard);
@@ -56,7 +52,6 @@ function checkMatch(){
             cardTwo.classList.remove ('flip'); 
             freezeState = false;
         }, 1000);
-        
     }
 }
 
@@ -70,9 +65,7 @@ function shuffle() {
 
 cards.forEach(card => card.addEventListener("click", flipCard));
 
-// when 1st card flipped, start timer. 
 // stop timer when all cards matched.
-
 function gameOver() {
     if (numberPairs == 0) {
         activeGame = false;
@@ -83,14 +76,13 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// ANOTHER TIMER TO TRY
-// var timerVar = setInterval(countTimer, 1000);
+//  TIMER 
 var totalSeconds = 0;
 async function countTimer() {
     while(activeGame == true) {
         ++totalSeconds;
         var hour = Math.floor(totalSeconds / 3600);
-        var minute = Math.floor((totalSeconds - hour * 3600) / 60);
+        var minute = Math.floor((totalSeconds - hour * 3600/60) / 60);
         var second = totalSeconds - (hour * 3600 + minute * 60);
         if(hour < 10) {
             hour = "0" + hour;
@@ -106,7 +98,7 @@ async function countTimer() {
     }
 }
 
-// reset game or new game button
+// new game button
 function refreshPage() {
     window.location.reload();
 }
