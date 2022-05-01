@@ -3,8 +3,6 @@ Description: My first game game project with HTML, CSS and JS.  The object of th
 
 How to play: Single click on 2 cards in succession.  If the cards match, they will stay face up.  If the cards do not match, they will turn back face down.  Remember which card is where so you can match all 12 pairs.
 
-Bug to fix: If you double click on the first card, that card is disabled face-down. 
-
 Credits and Resources: 
   With guidance from my UW instructors, and Coding Guru/Advisor Natasha.
   
